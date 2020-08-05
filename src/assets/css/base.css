@@ -19,9 +19,13 @@ html {
   height: 100%;
 }
 
-a{
+a {
   text-decoration: none;
   color: #000;
+}
+ul,
+li {
+  list-style: none;
 }
 
 /* .clearfix::after{

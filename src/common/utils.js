@@ -11,9 +11,9 @@ export default class GlobalDataUtils {
    * @param {Function} func 要做防抖的函数
    * @param {Number} delay  限制时间
    */
-  static debounce (func, delay) {
+  static debounce(func, delay) {
     let timer = null
-    return function (...args) {
+    return function(...args) {
       if (timer) {
         clearTimeout(timer)
       }
@@ -30,7 +30,7 @@ export default class GlobalDataUtils {
    * let date = new Date()
    * dateFormat("yyyy-MM-dd hh:mm", date)
    */
-  static dateFormat (fmt, date) {
+  static dateFormat(fmt, date) {
     let ret
     const opt = {
       'y+': date.getFullYear().toString(), // 年
@@ -54,20 +54,18 @@ export default class GlobalDataUtils {
   }
 
   /**
-  * [通过参数名获取url中的参数值]
-  * 示例URL:http://htmlJsTest/getrequest.html?uid=admin&rid=1&fid=2&name=小明
-  * @param  {[string]} queryName [参数名]
-  * @return {[string]}           [参数值]
-  */
-  static getQueryValue (queryName) {
-    var reg = new RegExp("(^|&)" + queryName + "=([^&]*)(&|$)", "i");
-    var r = window.location.search.substr(1).match(reg);
+   * [通过参数名获取url中的参数值]
+   * 示例URL:http://www.baidu.com?uid=admin&rid=1&fid=2&name=小明
+   * @param  {[string]} queryName [参数名]
+   * @return {[string]}           [参数值]
+   */
+  static getQueryValue(queryName) {
+    var reg = new RegExp('(^|&)' + queryName + '=([^&]*)(&|$)', 'i')
+    var r = window.location.search.substr(1).match(reg)
     if (r != null) {
-      return decodeURI(r[2]);
+      return decodeURI(r[2])
     } else {
-      return null;
+      return null
     }
   }
-
 }
-

@@ -11,11 +11,9 @@ export default {
 </script>
 
 <style>
-/* @import 'assets/css/normalize.css';
-@import 'assets/css/base.css';
-@import 'assets/css/font-awesome.min.css'; */
 
 #app {
   width: 100%;
+  height: 100%;
 }
 </style>

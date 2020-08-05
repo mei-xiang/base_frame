@@ -7,6 +7,18 @@ const routes = [
   {
     path: '/',
     component: () => import('views/home/Home')
+  },
+  {
+    path: '/enterpriseImage',
+    component: () => import('views/enterpriseImage/EnterpriseImage')
+  },
+  {
+    path: '/deviceTopology',
+    component: () => import('views/deviceTopology/DeviceTopology')
+  },
+  {
+    path: '/enterpriseOrder',
+    component: () => import('views/enterpriseOrder/EnterpriseOrder')
   }
 ]
 
